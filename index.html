@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Synchronization Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Process Synchronization Library</h1>
+        <div class="input-section">
+            <label for="demoType">Choose Synchronization Demo:</label>
+            <select id="demoType" class="uniform-size">
+                <option value="mutex">Mutex</option>
+                <option value="semaphore">Semaphore</option>
+                <option value="condition">Condition Variable</option>
+            </select>
+
+            <label for="numThreads">Number of Threads:</label>
+            <input type="number" id="numThreads" class="uniform-size" placeholder="Enter number of threads">
+
+            <label for="maxAccess" id="semaphoreLabel">Max Threads (Semaphore only):</label>
+            <input type="number" id="maxAccess" class="uniform-size" placeholder="Max threads for semaphore" style="display: none;">
+
+            <button class="uniform-size" onclick="runDemo()">Get Result</button>
+        </div>
+        
+        <div class="output-section">
+            <h2>Output</h2>
+            <pre id="output" class="uniform-size"></pre>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
